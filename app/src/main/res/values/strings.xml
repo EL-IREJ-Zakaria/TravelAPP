@@ -1,3 +1,35 @@
 <resources>
     <string name="app_name">TravelAPP</string>
+    <string name="indigo">IndiGo</string>
+    <string name="_20_december_2022">20 December 2022</string>
+    <string name="todo">TODO</string>
+    <string name="del">DEL</string>
+    <string name="delhi_international_airport">Delhi International Airport</string>
+    <string name="Todo">TODO</string>
+    <string name="blr">BLR</string>
+    <string name="bengaluru_airport_india">Bengaluru Airport India</string>
+    <string name="_04h_30m">04h 30m</string>
+    <string name="todO">TODO</string>
+    <string name="_01_adult">01 Adult</string>
+    <string name="toDo">TODO</string>
+    <string name="meal">Meal</string>
+    <string name="passenger_name">Passenger Name</string>
+    <string name="shreya_kumar">Shreya Kumar</string>
+    <string name="flight_type">Flight Type</string>
+    <string name="economy">Economy</string>
+    <string name="flight_code">Flight Code</string>
+    <string name="ig_2105">IG-2105</string>
+    <string name="boarding_time">Boarding Time</string>
+    <string name="_06_15_am">06:15 AM</string>
+    <string name="gate">Gate</string>
+    <string name="a5">A5</string>
+    <string name="terminal">Terminal</string>
+    <string name="t2">T2</string>
+    <string name="seat_number">Seat Number</string>
+    <string name="A5">A5</string>
+    <string name="tOdo">TODO</string>
+    <string name="_12584624275313506759">12584624275313506759</string>
+    <string name="terms_amp_condition"><![CDATA[Terms & Condition]]></string>
+    <string name="curabitur_ultrices_nisi_ac_vulputate_lacinia_donec_pharetra_tincidunt_velit_sed_iaculis_est_sollicitudin_ac">Curabitur ultrices nisi ac vulputate lacinia. Donec pharetra tincidunt velit, sed iaculis est sollicitudin ac.</string>
+    <string name="download_e_ticket">Download E-Ticket</string>
 </resources>

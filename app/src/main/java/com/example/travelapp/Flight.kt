@@ -10,5 +10,6 @@ data class Flight(
     val arrivalTime: String,
     val price: String,
     val freeMeal: Boolean,
-    val discountCode: String
+    val discountCode: String,
+    val airlineLogo: Int
 )

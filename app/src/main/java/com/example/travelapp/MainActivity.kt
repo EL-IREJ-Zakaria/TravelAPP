@@ -14,10 +14,14 @@ class MainActivity : AppCompatActivity() {
         flightsRecyclerView.layoutManager = LinearLayoutManager(this)
 
         val flights = listOf(
-            Flight("Indigo", R.drawable.ic_indigo, "DEL", "06:30", "04h 15m", "BLR", "10:45", "7,319", true, "Use Code: Flyaway60 and get 60% instant cashback"),
-            Flight("Vistara", R.drawable.ic_vistara, "DEL", "07:15", "02h 25m", "BLR", "09:40", "7,319", true, "Use Code: Flyaway60 and get 60% instant cashback"),
-            Flight("Spicejet", R.drawable.ic_spicejet, "DEL", "07:55", "02h 10m", "BLR", "10:05", "7,319", true, "User GIUNIQUE and get Rs.250 instant discount"),
-            Flight("Indigo", R.drawable.ic_indigo, "DEL", "08:45", "02h 25m", "BLR", "11:10", "7,319", true, "Use Code: Flyaway60 and get 60% instant cashback"),
+            Flight("Indigo",
+                R.drawable.image1, "DEL", "06:30", "04h 15m", "BLR", "10:45", "7,319", true, "Use Code: Flyaway60 and get 60% instant cashback"),
+            Flight("Vistara",
+                R.drawable.vistara, "DEL", "07:15", "02h 25m", "BLR", "09:40", "7,319", true, "Use Code: Flyaway60 and get 60% instant cashback"),
+            Flight("Spicejet",
+                R.drawable.image1, "DEL", "07:55", "02h 10m", "BLR", "10:05", "7,319", true, "User GIUNIQUE and get Rs.250 instant discount"),
+            Flight("Indigo",
+                R.drawable.vistara, "DEL", "08:45", "02h 25m", "BLR", "11:10", "7,319", true, "Use Code: Flyaway60 and get 60% instant cashback"),
             Flight("Emirates", R.drawable.ic_emirates, "DEL", "10:00", "02h 15m", "BLR", "12:15", "7,319", true, "User GIUNIQUE and get Rs.250 instant discount"),
             Flight("Indigo", R.drawable.ic_indigo, "DEL", "06:30", "04h 15m", "BLR", "10:45", "7,319", true, "Use Code: Flyaway60 and get 60% instant cashback"),
             Flight("Indigo", R.drawable.ic_indigo, "DEL", "06:30", "04h 15m", "BLR", "10:45", "7,319", true, "User GIUNIQUE and get Rs.250 instant discount")
@@ -25,5 +29,20 @@ class MainActivity : AppCompatActivity() {
 
         val adapter = FlightAdapter(flights)
         flightsRecyclerView.adapter = adapter
+    }
+
+    fun Flight(
+        airlineName: String,
+        airlineLogoResId: Int,
+        departureCode: String,
+        departureTime: String,
+        flightDuration: String,
+        arrivalCode: String,
+        arrivalTime: String,
+        price: String,
+        freeMeal: Boolean,
+        discountCode: String
+    ): Flight {
+        TODO("Provide the return value")
     }
 }
