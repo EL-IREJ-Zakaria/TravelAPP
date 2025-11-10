@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    tools:context=".TicketActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/header_background"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:background="#651FFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/todo"
+            android:src="@android:drawable/ic_menu_revert"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@android:color/white" />
+
+        <TextView
+            android:id="@+id/airline_name_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/indigo"
+            android:textColor="@android:color/white"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/header_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/header_background" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/ticket_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginEnd="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/ticket_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_20_december_2022"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/ticket_departure_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/del"
+                    android:textColor="@android:color/black"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/ticket_flight_icon"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ticket_date" />
+
+                <TextView
+                    android:id="@+id/ticket_departure_airport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delhi_international_airport"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="@id/ticket_departure_code"
+                    app:layout_constraintTop_toBottomOf="@id/ticket_departure_code" />
+
+                <ImageView
+                    android:id="@+id/ticket_flight_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/Todo"
+                    android:src="@android:drawable/ic_menu_send"
+                    app:layout_constraintBottom_toBottomOf="@id/ticket_departure_code"
+                    app:layout_constraintEnd_toStartOf="@id/ticket_arrival_code"
+                    app:layout_constraintStart_toEndOf="@id/ticket_departure_code"
+                    app:layout_constraintTop_toTopOf="@id/ticket_departure_code" />
+
+                <TextView
+                    android:id="@+id/ticket_arrival_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blr"
+                    android:textColor="@android:color/black"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ticket_flight_icon"
+                    app:layout_constraintTop_toTopOf="@id/ticket_departure_code" />
+
+                <TextView
+                    android:id="@+id/ticket_arrival_airport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bengaluru_airport_india"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@id/ticket_arrival_code"
+                    app:layout_constraintTop_toBottomOf="@id/ticket_arrival_code" />
+
+                <TextView
+                    android:id="@+id/ticket_flight_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/_04h_30m"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ticket_flight_icon" />
+
+                <ImageView
+                    android:id="@+id/passenger_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:contentDescription="@string/todO"
+                    android:src="@android:drawable/ic_menu_myplaces"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ticket_departure_airport" />
+
+                <TextView
+                    android:id="@+id/passenger_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/_01_adult"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintBottom_toBottomOf="@id/passenger_icon"
+                    app:layout_constraintStart_toEndOf="@id/passenger_icon"
+                    app:layout_constraintTop_toTopOf="@id/passenger_icon" />
+
+                <ImageView
+                    android:id="@+id/meal_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/toDo"
+                    android:src="@android:drawable/ic_menu_recent_history"
+                    app:layout_constraintEnd_toStartOf="@+id/meal_text"
+                    app:layout_constraintTop_toTopOf="@id/passenger_icon" />
+
+                <TextView
+                    android:id="@+id/meal_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/meal"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintBottom_toBottomOf="@id/meal_icon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/meal_icon"
+                    app:layout_constraintTop_toTopOf="@id/meal_icon" />
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="24dp"
+                    android:background="#E0E0E0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/passenger_icon" />
+
+                <TextView
+                    android:id="@+id/passenger_name_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/passenger_name"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toStartOf="@id/flight_type_label"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+                <TextView
+                    android:id="@+id/passenger_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/shreya_kumar"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/passenger_name_label"
+                    app:layout_constraintStart_toStartOf="@id/passenger_name_label"
+                    app:layout_constraintTop_toBottomOf="@id/passenger_name_label" />
+
+                <TextView
+                    android:id="@+id/flight_type_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/flight_type"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toStartOf="@id/flight_code_label"
+                    app:layout_constraintStart_toEndOf="@id/passenger_name_label"
+                    app:layout_constraintTop_toTopOf="@id/passenger_name_label" />
+
+                <TextView
+                    android:id="@+id/flight_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/economy"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/flight_type_label"
+                    app:layout_constraintStart_toStartOf="@id/flight_type_label"
+                    app:layout_constraintTop_toBottomOf="@id/flight_type_label" />
+
+                <TextView
+                    android:id="@+id/flight_code_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/flight_code"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/flight_type_label"
+                    app:layout_constraintTop_toTopOf="@id/flight_type_label" />
+
+                <TextView
+                    android:id="@+id/flight_code"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ig_2105"
+                    android:gravity="center"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/flight_code_label"
+                    app:layout_constraintStart_toStartOf="@id/flight_code_label"
+                    app:layout_constraintTop_toBottomOf="@id/flight_code_label" />
+
+
+                <TextView
+                    android:id="@+id/boarding_time_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="start"
+                    android:text="@string/boarding_time"
+                    app:layout_constraintEnd_toStartOf="@id/gate_label"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/passenger_name" />
+
+                <TextView
+                    android:id="@+id/boarding_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/_06_15_am"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/boarding_time_label"
+                    app:layout_constraintStart_toStartOf="@id/boarding_time_label"
+                    app:layout_constraintTop_toBottomOf="@id/boarding_time_label" />
+
+                <TextView
+                    android:id="@+id/gate_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/gate"
+                    app:layout_constraintEnd_toStartOf="@id/terminal_label"
+                    app:layout_constraintStart_toEndOf="@id/boarding_time_label"
+                    app:layout_constraintTop_toTopOf="@id/boarding_time_label" />
+
+                <TextView
+                    android:id="@+id/gate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/a5"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/gate_label"
+                    app:layout_constraintStart_toStartOf="@id/gate_label"
+                    app:layout_constraintTop_toBottomOf="@id/gate_label" />
+
+                <TextView
+                    android:id="@+id/terminal_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/terminal"
+                    app:layout_constraintEnd_toStartOf="@id/seat_label"
+                    app:layout_constraintStart_toEndOf="@id/gate_label"
+                    app:layout_constraintTop_toTopOf="@id/gate_label" />
+
+                <TextView
+                    android:id="@+id/terminal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/t2"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/terminal_label"
+                    app:layout_constraintStart_toStartOf="@id/terminal_label"
+                    app:layout_constraintTop_toBottomOf="@id/terminal_label" />
+
+                <TextView
+                    android:id="@+id/seat_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/seat_number"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/terminal_label"
+                    app:layout_constraintTop_toTopOf="@id/terminal_label" />
+
+                <TextView
+                    android:id="@+id/seat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text="@string/A5"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/seat_label"
+                    app:layout_constraintStart_toStartOf="@id/seat_label"
+                    app:layout_constraintTop_toBottomOf="@id/seat_label" />
+
+                <View
+                    android:id="@+id/cutout_left"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/ticket_cutout"
+                    app:layout_constraintBottom_toTopOf="@id/dashed_line"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="-36dp"
+                    app:layout_constraintTop_toBottomOf="@id/dashed_line" />
+
+                <View
+                    android:id="@+id/dashed_line"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/dashed_line"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/boarding_time" />
+
+                <View
+                    android:id="@+id/cutout_right"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/ticket_cutout"
+                    app:layout_constraintBottom_toTopOf="@id/dashed_line"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="-36dp"
+                    app:layout_constraintTop_toBottomOf="@id/dashed_line" />
+
+                <ImageView
+                    android:id="@+id/barcode"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="16dp"
+                    android:contentDescription="@string/tOdo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dashed_line" />
+
+                <TextView
+                    android:id="@+id/barcode_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:letterSpacing="0.2"
+                    android:text="@string/_12584624275313506759"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/barcode" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/terms_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/terms_amp_condition"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ticket_card" />
+
+        <TextView
+            android:id="@+id/terms_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/curabitur_ultrices_nisi_ac_vulputate_lacinia_donec_pharetra_tincidunt_velit_sed_iaculis_est_sollicitudin_ac"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/terms_label" />
+
+        <Button
+            android:id="@+id/download_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:backgroundTint="#651FFF"
+            android:padding="16dp"
+            android:text="@string/download_e_ticket"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/terms_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
